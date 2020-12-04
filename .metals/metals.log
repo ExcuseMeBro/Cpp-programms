@@ -41,3 +41,15 @@ INFO: Unsupported notification method: $/setTraceNotification
 2020.12.02 16:22:55 WARN  no build tool detected in workspace '/home/developer/VSCode/Cpp-programms'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 Dec 02, 2020 5:55:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTraceNotification
+2020.12.02 17:55:45 INFO  shutting down Metals
+2020.12.03 15:04:54 INFO  Started: Metals version 0.9.7 in workspace '/home/developer/VSCode/Cpp-programms' for client vscode.
+2020.12.03 15:05:01 INFO  time: initialize in 7.18s
+2020.12.03 15:05:03 WARN  Build server is not auto-connectable.
+2020.12.03 15:05:03 WARN  no build tool detected in workspace '/home/developer/VSCode/Cpp-programms'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.03 15:13:21 INFO  shutting down Metals
+2020.12.04 11:17:59 INFO  Started: Metals version 0.9.7 in workspace '/home/developer/VSCode/Cpp-programms' for client vscode.
+2020.12.04 11:18:05 INFO  time: initialize in 6.76s
+2020.12.04 11:18:07 WARN  Build server is not auto-connectable.
+2020.12.04 11:18:07 WARN  no build tool detected in workspace '/home/developer/VSCode/Cpp-programms'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Dec 04, 2020 3:03:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
