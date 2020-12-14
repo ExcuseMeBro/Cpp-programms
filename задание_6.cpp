@@ -23,7 +23,7 @@ int main()
 {
     int A[8];
     int k = 0;
-    ifstream f("coordinates.txt");
+    ifstream f("cdtes.txt");
     if (f.is_open())
     {
         while (!f.eof() && k < 8)
@@ -48,25 +48,25 @@ int main()
         int CDxCA = product(CD1, CD2, CA1, CA2);
         if (((DBxDA > 0) && (BCxBA > 0) && (CDxCA > 0)) || ((DBxDA < 0) && (BCxBA < 0) && (CDxCA < 0)))
         {
-            cout << "Точка A лежит внутри треугольника BCD" << endl;
+            cout << "Point A lies inside triangle BCD" << endl;
         }
         else
         {
             if ((DBxDA > 0) || (BCxBA > 0) || (CDxCA > 0))
             {
-                cout << "Точка A лежит вне треугольника BCD" << endl;
+                cout << "Point A lies outside triangle BCD" << endl;
             }
             else
             {
                 if ((DBxDA == 0) || (BCxBA == 0) || (CDxCA == 0))
                 {
-                    cout << "Точка A лежит на стороне треугольника BCD" << endl;
+                    cout << "Point A lies on the side of triangle BCD" << endl;
                 }
                 else
                 {
                     if (((DBxDA == 0) && (BCxBA == 0)) || ((BCxBA == 0) && (CDxCA == 0)) || ((CDxCA == 0) && (DBxDA == 0)))
                     {
-                        cout << "Точка A совпадает с вершиной треугольника BCD" << endl;
+                        cout << "Point A coincides with the apex of triangle BCD" << endl;
                     }
                 }
             }
@@ -80,9 +80,9 @@ int main()
         double SDAB = square(dDA, dDB, dBA);
         double SBAC = square(dBC, dCA, dBA);
         double SCAD = square(dDA, dCD, dCA);
-        cout << "Площадь треугольника SDAB=" << SDAB << endl;
-        cout << "Площадь треугольника SBAC=" << SBAC << endl;
-        cout << "Площадь треугольника SCAD=" << SCAD << endl;
+        cout << "Area of a triangle SDAB=" << SDAB << endl;
+        cout << "Area of a triangle SBAC=" << SBAC << endl;
+        cout << "Area of a triangle SCAD=" << SCAD << endl;
         double maxS = max(SDAB, max(SBAC, SCAD));
         int x1 = 0;
         int y1 = 0;
@@ -98,7 +98,7 @@ int main()
         int a2 = 0;
         int b2 = 0;
 
-        cout << "Площадь наибольшего треугольника ";
+        cout << "The area of the largest triangle ";
         if (maxS == SDAB)
         {
             cout << "DAB= " << maxS << endl;
@@ -155,25 +155,25 @@ int main()
         double COS3 = angle(xxx1, yyy1, x1, y1, d1, d2);
         if ((COS1 > 0) && (COS2 > 0) && (COS3 > 0))
         {
-            cout << "Треугольник с наибольшей площадью остроугольный" << endl;
+            cout << "The triangle with the largest area is acute-angled" << endl;
         }
         else if ((COS1 == 0) || (COS2 == 0) || (COS3 == 0))
         {
-            cout << "Треугольник с наибольшей площадью прямоугольный" << endl;
+            cout << "The triangle with the largest area is rectangular" << endl;
         }
         else
         {
-            cout << "Треугольник с наибольшей площадью тупоугольный" << endl;
+            cout << "The triangle with the largest area is obtuse" << endl;
         }
         int xh = (a1 + a2) / 2;
         int yh = (b1 + b2) / 2;
         int h = sqrt(pow(xh - A[6], 2) + pow(yh - A[7], 2));
-        cout << "Высота наибольшего треугольника=  " << h << endl;
-        cout << "Координаты основания высоты= [" << xh << ";" << yh << "]\n";
+        cout << "Height of the largest triangle =  " << h << endl;
+        cout << "Height base coordinates = [" << xh << ";" << yh << "]\n";
     }
     else
     {
-        cout << "Файл не найден!" << endl;
+        cout << "File not found!" << endl;
     }
     return 0;
 }

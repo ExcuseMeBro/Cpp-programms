@@ -15,17 +15,17 @@ void convertTo( int nSystem, double a )
 	double d;
 	string strCC = "";
 	
-	d = modf(a, &c); // с- целая часть. d - дробная часть
+	d = modf(a, &c); 
 	if (fabs(c) < nSystem)
 	{ 
 		strCC = szTable[abs((int)c)];
 	}
 	else
 	{
-		while (c > 0) // преобразовываем целую часть в СС9
+		while (c > 0) 
 		{
-			double  ost = std::modf(c / (double)nSystem, &c); // остаток от деления
-			strCC.insert( strCC.begin(), szTable[ (int) (ost * 10 ) ] );// перевод дробной нашей нужной  части в нужное число по таблице, ставим в начало
+			double  ost = std::modf(c / (double)nSystem, &c); 
+			strCC.insert( strCC.begin(), szTable[ (int) (ost * 10 ) ] );
 			
 		}
 	}
@@ -34,14 +34,14 @@ void convertTo( int nSystem, double a )
 		strCC += ".";
 		for (int i = 5; i > 0; --i)
 		{
-			double x;//целая часть. То, что мы будем прибавлять
+			double x;
 			d = std::modf(d * (double)nSystem, &x);
 			strCC += szTable[ (int)x ];
 
 		}
 
 	}
-	cout << "Число в " << nSystem << "CC=" << strCC.c_str() << endl;
+	cout << "Number in " << nSystem << "CC=" << strCC.c_str() << endl;
 
 	
 }
@@ -49,7 +49,7 @@ void convertTo( int nSystem, double a )
 int main()
 {
 	double a;
-	cout << "Введите номер = ";
+	cout << "Input number = ";
 	cin >> a;
 
 	convertTo(2, a);

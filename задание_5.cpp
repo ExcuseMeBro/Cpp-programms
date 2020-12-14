@@ -10,30 +10,30 @@ void fillArray(int num[67])
 int sortArray(int num[67]) 
 {
     const int size = 67;
-    int counter = 0;
+    int cntr = 0;
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size-1; j++) {
             if (num[j] > num[j + 1]) {
                 swap(num[j],num[j + 1]);
-                counter++;
+                cntr++;
             }
         }
     }
-    return counter;
+    return cntr;
 }
 int main()
 {
 	const int size = 67;
     int num[67];
-    int counter = 0;
-    int sumcounter = 0;
+    int cntr = 0;
+    int sumcntr = 0;
 
     for (int i = 0; i < 50; i++) {
         fillArray(num);
-        counter = sortArray(num);
-        sumcounter += counter;
-        cout << counter << endl;
+        cntr = sortArray(num);
+        sumcntr += cntr;
+        cout << cntr << endl;
     }
-    cout << "Среднее число итераций = " << sumcounter/50 << endl;
+    cout << "Average number of iterations = " << sumcntr/50 << endl;
 	return 0;
 }

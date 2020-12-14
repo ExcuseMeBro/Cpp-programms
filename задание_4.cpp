@@ -24,13 +24,12 @@ int NOD(int A, int B)
 }
 int main()
 {
-    setlocale(LC_ALL, "Rus");
     int array[4];
     int k = 0, m2 = 0, m = 0, nStep = 0, nod;
-    ifstream file("input_value.txt");
+    ifstream file("in_val.txt");
     if (!file.is_open())
     {
-        cout << "Файл не может быть открыт!\n";
+        cout << "The file cannot be opened!\n";
     }
     else
         while (!file.eof())
@@ -57,17 +56,17 @@ int main()
         nod = NOD(array[i], array[i + 1]);
         ++nStep; 
     }
-    cout << "НОД = " << nod << endl;
-    cout << "Шаги НОДа = " << nStep << endl;
+    cout << "GCD = " << nod << endl;
+    cout << "GCD steps = " << nStep << endl;
     cout << "m = " << m << endl;
     cout << "m/2 = " << m2 << endl;
     int NODm_m2 = NOD(m, m2);
-    cout << "НOK = " << ((m * m2) / (NODm_m2)) << endl;
+    cout << "NOK = " << ((m * m2) / (NODm_m2)) << endl;
     ofstream fout;
-    fout.open("ReSulT.txt");
+    fout.open("solved.txt");
     if (fout.is_open())
     {
-        fout << "Список простых чисел от 1 до m: \n";
+        fout << "List of prime numbers from 1 to m: \n";
         int i = 0, nStep2 = 0;
         int *a = new int[m + 1];
         for (int i = 0; i <= m; i++)
@@ -88,7 +87,7 @@ int main()
         }
         if (nStep2 > sqrt(m))
         {
-            fout << "Количество шагов больше, чем корень из m";
+            fout << "The number of steps is greater than the root of m";
             fout.close();
             return 0;
         }
@@ -96,19 +95,19 @@ int main()
         {
             if (nStep2 < sqrt(m))
             {
-                fout << "Количество шагов меньше, чем корень из m ";
+                fout << "The number of steps is less than the root of m ";
                 fout.close();
                 return 0;
             }
             if (nStep2 == sqrt(m))
             {
-                fout << "Количество шагов равно корню из m";
+                fout << "The number of steps is equal to the root of m";
                 fout.close();
                 return 0;
             }
         }
     }
     else
-        cout << "Файл не может быть открыт!\n";
+        cout << "The file cannot be opened!\n";
     return 0;
 }

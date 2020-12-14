@@ -10,52 +10,52 @@ int main()
     n = 0;
     z = 1;
     d = 0;
-    cout << "Введите имя файла сохранения:";
+    cout << "Enter the name of the save file:";
     getline(cin, name);
     fout.open(name);
     if (!fout.is_open())
     {
         n = 1;
-        cout << "Ошибка ввода!" << endl;
+        cout << "Input Error!" << endl;
     }
     if (n == 0)
     {
-        cout << "Введите a:";
+        cout << "Input a:";
         cin >> a;
         if (std::cin.fail())
         {
             n = 1;
-            cout << "Ошибка ввода!" << endl;
+            cout << "Input Error!" << endl;
         }
     }
     if (n == 0)
     {
-        cout << "Введите x1:";
+        cout << "Input x1:";
         cin >> x1;
         if (std::cin.fail())
         {
             n = 1;
-            cout << "Ошибка ввода!" << endl;
+            cout << "Input Error!" << endl;
         }
     }
     if (n == 0)
     {
-        cout << "Введите x2:";
+        cout << "Input x2:";
         cin >> x2;
         if (std::cin.fail())
         {
             n = 1;
-            cout << "Ошибка ввода!" << endl;
+            cout << "Input Error!" << endl;
         }
     }
     if (n == 0)
     {
-        cout << "Введите d:";
+        cout << "Input d:";
         cin >> d;
         if (std::cin.fail())
         {
             n = 1;
-            cout << "Ошибка ввода!" << endl;
+            cout << "Input Error!" << endl;
         }
     }
     if (n == 0)
@@ -63,11 +63,11 @@ int main()
         if (d < 0 || x1 > x2 || d == 0)
         {
             n = 1;
-            cout << "Ошибка ввода!" << endl;
+            cout << "Input Error!" << endl;
         }
         if (n == 0)
         {
-            fout << "Полученные результаты:" << endl;
+            fout << "Results:" << endl;
             for (; x1 <= x2; x1 += d)
             {
                 y = a * sin(1. / x1);
@@ -76,6 +76,6 @@ int main()
             }
         }
     }
-    cout << "Откройте файл " << name << ", чтобы увидеть результаты!\n";
+    cout << "Open the file " << name << ", to see the results!\n";
     fout.close();
 }
