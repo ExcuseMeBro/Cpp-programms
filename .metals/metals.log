@@ -87,3 +87,13 @@ INFO: Unsupported notification method: $/setTraceNotification
 2020.12.12 21:25:14 WARN  Build server is not auto-connectable.
 2020.12.12 21:25:14 WARN  no build tool detected in workspace '/home/developer/VSCode/Cpp-programms'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
 2020.12.12 21:26:55 INFO  shutting down Metals
+2020.12.20 15:41:06 INFO  Started: Metals version 0.9.8 in workspace '/home/developer/VSCode/Cpp-programms' for client vscode.
+2020.12.20 15:41:13 INFO  time: initialize in 7.63s
+2020.12.20 15:41:16 WARN  Build server is not auto-connectable.
+2020.12.20 15:41:16 WARN  no build tool detected in workspace '/home/developer/VSCode/Cpp-programms'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2020.12.20 16:51:02 INFO  shutting down Metals
+[0m2021.01.25 11:25:18 INFO  Started: Metals version 0.9.10 in workspace '/home/developer/VSCode/Cpp-programms' for client vscode 1.52.1.[0m
+[0m2021.01.25 11:25:28 INFO  time: initialize in 10s[0m
+[0m2021.01.25 11:25:30 WARN  resetting database: /home/developer/VSCode/Cpp-programms/.metals/metals.h2.db[0m
+[0m2021.01.25 11:25:31 WARN  Build server is not auto-connectable.[0m
+[0m2021.01.25 11:25:31 WARN  no build tool detected in workspace '/home/developer/VSCode/Cpp-programms'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
