@@ -4,16 +4,23 @@ using namespace std;
 
 int main()
 {
-    string sentence = "Helhlho Wowrldw";
+    string sentence = "O`zbekiston yoshlari bunyodkoridir!";
+    int length;
+    string temp = "";
 
     for (int i = 0; i < sentence.length(); i++)
     {
-        if (sentence[i] == sentence[0])
+        if (sentence[i] != ' ')
         {
-            sentence[i] = '.';
+            temp += sentence[i];
+        }
+        if (sentence[i] == ' ')
+        {
+            cout << temp + '.' + " ";
+            temp = "";
         }
     }
-    std::cout << sentence;
+    std::cout << temp;
 
     return 0;
 }

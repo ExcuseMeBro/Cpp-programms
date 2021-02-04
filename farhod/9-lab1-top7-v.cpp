@@ -35,7 +35,15 @@ int main()
     writePos += bufferSize;
   }
   file.close();
-
+  printf("------------------------------------------\n");
+  printf("Iltimos dasturni ishlatishdan oldin dastur joylashgan katalogda text.txt nomli fayl yararing!\n");
+  printf("-------------------------------------------\n");
+  printf("------------------------------------------\n");
+  printf("Natija yana text.txt fayliga yoziladi!\n");
+  printf("-------------------------------------------\n");
+  printf("------------------------------------------\n");
+  printf("Dastur muvaffaqiyatli yakunlandi!\n");
+  printf("-------------------------------------------\n");
   truncate("text.txt", writePos);
   return 0;
 }
