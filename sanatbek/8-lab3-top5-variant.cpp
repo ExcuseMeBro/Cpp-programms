@@ -32,7 +32,7 @@ void minMaxLengthWords(string input, string &minWord)
   
 int main()  
 { 
-    string a = "hello wolrd!"; 
+    string a = "hello wolrd! a b c"; 
     string minWord; 
     minMaxLengthWords(a, minWord); 
       
